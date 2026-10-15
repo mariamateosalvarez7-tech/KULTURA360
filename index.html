@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Cultural - KULTURA360</title>
+    <link rel="icon" type="image/png" href="img/KULTURA360.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- MODAL DE BENVINGUDA (JS: es mostra el primer cop) -->
+<div id="welcome-modal" class="modal-overlay" style="display:none;">
+    <div class="modal-box">
+        <h2>⋆✶Benvingut/da a KULTURA360!✶⋆</h2>
+        <p>Descobreix el Festival Cultural 2026: tres dies de música, art i tecnologia al cor de Barcelona.</p>
+        <button id="modal-close" class="btn">Explorar el festival</button>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">
+        <a href="#inici">
+            <img src="img/KULTURA360.png" alt="Kultura360 logo">
+        </a>
+    </div>
+
+    <!-- Hamburger icon (mòbil) -->
+    <button class="hamburger" id="hamburger" aria-label="Obrir menú">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav-menu">
+        <ul>
+            <li><a href="#inici">Inici</a></li>
+            <li><a href="#dates">Dates</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contacte">Contacte</a></li>
+            <li><a href="#registre">Registre</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- CONTINGUT -->
+<main>
+    <section class="hero" id="inici">
+        <div class="hero-content">
+            <h1>Festival Cultural 2026</h1>
+            <p>Viu una experiència única amb música, art i tecnologia</p>
+            <a href="#registre" class="btn">Registra't</a>
+        </div>
+    </section>
+
+    <section class="dates" id="dates">
+        <h2>Dates del Festival</h2>
+        <p>El Neon Vibes Festival se celebrarà durant tres dies plens de música, art i tecnologia.</p>
+        <div class="calendar">
+            <div class="day">
+                <h3>Dia 1</h3>
+                <p>12 Juliol</p>
+            </div>
+            <div class="day">
+                <h3>Dia 2</h3>
+                <p>13 Juliol</p>
+            </div>
+            <div class="day">
+                <h3>Dia 3</h3>
+                <p>14 Juliol</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="itinerary" id="itinerary">
+        <h2>Itinerari</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Dia 1</th>
+                    <th>Dia 2</th>
+                    <th>Dia 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>18:00</td>
+                    <td>Obertura</td>
+                    <td>DJ Set</td>
+                    <td>Concert Live</td>
+                </tr>
+                <tr>
+                    <td>20:00</td>
+                    <td>Art Digital</td>
+                    <td>Performance</td>
+                    <td>Show Visual</td>
+                </tr>
+                <tr>
+                    <td>22:00</td>
+                    <td>Concert</td>
+                    <td>DJ Internacional</td>
+                    <td>Clausura</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- PATROCINADORS amb flipcard -->
+    <section class="sponsors">
+        <h2>Patrocinadors</h2>
+        <div class="sponsors-grid">
+            <div class="sponsor-card">
+                <div class="sponsor-inner">
+                    <div class="sponsor-front">
+                        <img src="img/logo1.png" alt="Patrocinador 1">
+                    </div>
+                    <div class="sponsor-back">
+                        <p>Destapa la felicitat</p>
+                        <a href="https://www.coca-cola.com" target="_blank">Visita'ns</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sponsor-card">
+                <div class="sponsor-inner">
+                    <div class="sponsor-front">
+                        <img src="img/logo2.png" alt="Patrocinador 2">
+                    </div>
+                    <div class="sponsor-back">
+                        <p>L'energia que ens mou</p>
+                        <a href="https://www.repsol.com" target="_blank">Visita'ns</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sponsor-card">
+                <div class="sponsor-inner">
+                    <div class="sponsor-front">
+                        <img src="img/logo3.png" alt="Patrocinador 3">
+                    </div>
+                    <div class="sponsor-back">
+                        <p>Red Bull et dóna ales</p>
+                        <a href="https://www.redbull.com" target="_blank">Visita'ns</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sponsor-card">
+                <div class="sponsor-inner">
+                    <div class="sponsor-front">
+                        <img src="img/logo4.png" alt="Patrocinador 4">
+                    </div>
+                    <div class="sponsor-back">
+                        <p>Música per tothom</p>
+                        <a href="https://www.spotify.com" target="_blank">Visita'ns</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ amb flipcard -->
+    <section class="faq" id="faq">
+        <h2>Preguntes Freqüents</h2>
+        <div class="faq-grid">
+
+            <div class="faq-card">
+                <div class="faq-inner">
+                    <div class="faq-front">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>On se celebra?</h3>
+                    </div>
+                    <div class="faq-back">
+                        <p>El festival tindrà lloc en un espai cultural a l'aire lliure al centre de Barcelona, amb zones habilitades per a tot tipus de públic.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-inner">
+                    <div class="faq-front">
+                        <i class="fas fa-ticket-alt"></i>
+                        <h3>Cal comprar entrada?</h3>
+                    </div>
+                    <div class="faq-back">
+                        <p>Sí, pots registrar-te gratuïtament o adquirir entrades VIP amb avantatges exclusius com accés a zones reservades i merchandise del festival.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-inner">
+                    <div class="faq-front">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Hi ha menjar?</h3>
+                    </div>
+                    <div class="faq-back">
+                        <p>Sí, hi haurà food trucks i zones de restauració amb oferta variada: menjar local, internacional i opcions veganes i sense gluten.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-inner">
+                    <div class="faq-front">
+                        <i class="fas fa-door-open"></i>
+                        <h3>Es pot sortir i tornar?</h3>
+                    </div>
+                    <div class="faq-back">
+                        <p>Sí, sempre que portis la teva acreditació del festival visible. Les reentrades estan permeses fins a les 23:00h de cada dia del festival.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-card">
+                <div class="faq-inner">
+                    <div class="faq-front">
+                        <i class="fas fa-wheelchair"></i>
+                        <h3>És accessible?</h3>
+                    </div>
+                    <div class="faq-back">
+                        <p>Sí, el recinte està completament adaptat per a persones amb mobilitat reduïda, amb rampes, lavabos accessibles i zones prioritàries.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!-- CONTACTE -->
+<section class="contact" id="contacte">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contacte</h2>
+            <p>Si tens qualsevol dubte, no dubtis en contactar amb nosaltres.</p>
+            <p><strong>Ubicació:</strong> Barcelona, Espanya</p>
+            <iframe
+                src="https://www.google.com/maps?q=Barcelona&output=embed"
+                width="100%"
+                height="200"
+                style="border:0;"
+                loading="lazy">
+            </iframe>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <!-- JS: validació email -->
+            <form id="contact-form" novalidate>
+                <input type="text" placeholder="Nom" required>
+                <input type="email" id="contact-email" placeholder="Correu electrònic" required>
+                <span class="error-msg" id="contact-email-error"></span>
+                <input type="text" placeholder="Assumpte" required>
+                <textarea placeholder="Missatge" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- REGISTRE -->
+<section class="register" id="registre">
+    <h2>Registra't</h2>
+    <!-- JS: validació email + contrasenyes coincidents -->
+    <form class="register-form" id="register-form" novalidate>
+        <input type="text" placeholder="Nom" required>
+        <input type="email" id="reg-email" placeholder="Correu electrònic" required>
+        <span class="error-msg" id="reg-email-error"></span>
+        <input type="password" id="reg-pass" placeholder="Contrasenya" required>
+        <input type="password" id="reg-pass2" placeholder="Confirmar contrasenya" required>
+        <span class="error-msg" id="reg-pass-error"></span>
+        <button type="submit">Crear compte</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-socials">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+    <div class="footer-links">
+        <a href="legal.html">Termes i condicions</a>
+        <a href="legal.html">Política de cookies</a>
+        <a href="legal.html">Política de privadesa</a>
+    </div>
+    <p class="footer-copy">© 2026 KULTURA360 - Maria Mateos i Júlia Solanilla</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - KULTURA360</title>
+    <link rel="icon" type="image/png" href="img/KULTURA360.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- LIGHTBOX (JS: s'obre en fer clic a imatge de la galeria) -->
+<div id="lightbox" class="lightbox" style="display:none;">
+    <div class="lightbox-overlay" id="lightbox-overlay"></div>
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Imatge ampliada">
+        <button id="lightbox-close" class="lightbox-close"><i class="fas fa-times"></i></button>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/KULTURA360.png" alt="Kultura360 logo">
+        </a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Obrir menú">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav-menu">
+        <ul>
+            <li><a href="index.html#inici">Inici</a></li>
+            <li><a href="index.html#dates">Dates</a></li>
+            <li><a href="galeria.html" class="active">Galeria</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="index.html#contacte">Contacte</a></li>
+            <li><a href="index.html#registre">Registre</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- SECCIÓ SLIDER: imatges d'esdeveniments anteriors -->
+    <section class="gallery-hero">
+        <h1>Galeria</h1>
+        <p>Reviu els millors moments dels festivals anteriors</p>
+    </section>
+
+    <section class="slider-section">
+        <h2>Edicions Anteriors</h2>
+
+        <div class="slider-container">
+            <div class="slider-track" id="slider-track">
+                <!-- 5 slides amb colors placeholder (substituir per imatges reals) -->
+                <div class="slide">
+                    <img src="img/event1.jpg" alt="Esdeveniment anterior 1" onerror="this.style.background='#69503c';this.style.height='400px';this.removeAttribute('src')">
+                    <div class="slide-caption">Festival 2022 – Obertura</div>
+                </div>
+                <div class="slide">
+                    <img src="img/event2.jpg" alt="Esdeveniment anterior 2" onerror="this.style.background='#8B5E3C';this.style.height='400px';this.removeAttribute('src')">
+                    <div class="slide-caption">Festival 2022 – Concert Final</div>
+                </div>
+                <div class="slide">
+                    <img src="img/event3.jpg" alt="Esdeveniment anterior 3" onerror="this.style.background='#907761';this.style.height='400px';this.removeAttribute('src')">
+                    <div class="slide-caption">Festival 2023 – Art Digital</div>
+                </div>
+                <div class="slide">
+                    <img src="img/event4.jpg" alt="Esdeveniment anterior 4" onerror="this.style.background='#735945';this.style.height='400px';this.removeAttribute('src')">
+                    <div class="slide-caption">Festival 2023 – DJ Internacional</div>
+                </div>
+                <div class="slide">
+                    <img src="img/event5.jpg" alt="Esdeveniment anterior 5" onerror="this.style.background='#1d1d1b';this.style.height='400px';this.removeAttribute('src')">
+                    <div class="slide-caption">Festival 2024 – Clausura</div>
+                </div>
+            </div>
+
+            <!-- Controls del slider -->
+            <button class="slider-btn prev" id="slider-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next" id="slider-next"><i class="fas fa-chevron-right"></i></button>
+
+            <!-- Dots indicadors -->
+            <div class="slider-dots" id="slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+                <span class="dot" data-index="4"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- GRAELLA 2x2: imatges de l'esdeveniment actual -->
+    <section class="gallery-grid-section">
+        <h2>Festival 2026</h2>
+        <p>Una avançada del que t'espera enguany</p>
+
+        <div class="gallery-grid">
+            <!-- JS: clic per ampliar (lightbox) -->
+            <div class="gallery-item">
+                <img src="img/gal1.jpg" alt="Galeria 1" class="gallery-img" onerror="this.parentElement.style.background='#69503c'">
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/gal2.jpg" alt="Galeria 2" class="gallery-img" onerror="this.parentElement.style.background='#8B5E3C'">
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/gal3.jpg" alt="Galeria 3" class="gallery-img" onerror="this.parentElement.style.background='#907761'">
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item">
+                <img src="img/gal4.jpg" alt="Galeria 4" class="gallery-img" onerror="this.parentElement.style.background='#735945'">
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-socials">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+    <div class="footer-links">
+        <a href="#">Termes i condicions</a>
+        <a href="#">Política de cookies</a>
+        <a href="#">Política de privadesa</a>
+    </div>
+    <p class="footer-copy">© 2026 KULTURA360 - Maria Mateos i Júlia Solanilla</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
